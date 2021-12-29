@@ -41,15 +41,15 @@
         "videos"
       ]
     },
-    "slug": {
-      "type": "uid",
-      "targetField": "title"
-    },
     "season": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::season.season",
       "inversedBy": "epizodes"
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }

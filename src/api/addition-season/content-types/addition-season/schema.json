@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "addition_seasons",
+  "info": {
+    "singularName": "addition-season",
+    "pluralName": "addition-seasons",
+    "displayName": "Addition season",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "season": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::season.season",
+      "inversedBy": "addition_season"
+    },
+    "urlVideo": {
+      "type": "string"
+    }
+  }
+}

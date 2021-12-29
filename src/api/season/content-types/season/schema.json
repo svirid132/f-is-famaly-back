@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "number": {
-      "type": "integer"
-    },
     "picture": {
       "type": "media",
       "multiple": false,
@@ -38,6 +35,23 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::epizode.epizode",
+      "mappedBy": "season"
+    },
+    "Title": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "Slug": {
+      "type": "uid"
+    },
+    "Number": {
+      "type": "integer"
+    },
+    "addition_season": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::addition-season.addition-season",
       "mappedBy": "season"
     }
   }
